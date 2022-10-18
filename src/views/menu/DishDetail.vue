@@ -483,6 +483,7 @@ export default {
       } else {
         this.dialogMsg = resources[`${this.langCode}_Dialog_Msg`].dataChanged;
         this.isShowConfirmDialog = true;
+        var a = 10;
       }
     },
 

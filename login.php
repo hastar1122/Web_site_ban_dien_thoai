@@ -1,8 +1,16 @@
 <?php
     include 'inc/header.php';
+    include 'classes/userlogin.php'
 ?>
+<?php
+    $class = new userlogin();
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
 
-
+        $login_check = $class->login_user($username, $password);
+   }
+?>
     <!-- login start -->
     <section class="section-tb-padding">
         <div class="container">
@@ -12,12 +20,20 @@
                         <div class="login-box">
                             <h1>Login</h1>
                             <p>Please login below account detail</p>
-                            /*đây là chỗ đăng nhập*/
-                            <form>
-                                <label>Email</label>
-                                <input type="text" name="email" placeholder="Email">
+                            <form action="login.php" method="POST">
+                                <label>Username</label>
+                                <input type="text" name="username" placeholder="Username">
                                 <label>Password</label>
                                 <input type="text" name="password" placeholder="Password">
+
+                                <span> 
+                                    <?php
+                                        if (isset($login_check)) {
+                                            echo $login_check;
+                                        }
+                                    ?>
+                                </span>
+                                <input type="submit" value="Sign in">
                                 <a href="login.php" class="btn-style1">Sign in</a>
                                 <a href="forgot-password.php" class="re-password">Forgot your password?</a>
                             </form>

@@ -2,8 +2,6 @@
     include 'inc/header.php';
     include 'inc/slider.php';
 ?>
-
-
     <!--banner start-->
     <section class="t-banner1 section-tb-padding">
         <div class="container">
@@ -2638,7 +2636,6 @@
         </div>
     </section>
     <!-- brand logo end -->
- 
 <?php
     include 'inc/footer.php';
 ?>

@@ -162,7 +162,6 @@
         </div>
     </section>
     <!-- footer copyright end -->
-
     <!-- back to top start -->
     <a href="javascript:void(0)" class="scroll" id="top">
         <span><i class="fa fa-angle-double-up"></i></span>
@@ -185,5 +184,4 @@
     <!-- custom -->
     <script src="js/custom.js"></script>
 </body>
-
 </html>

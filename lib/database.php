@@ -1,7 +1,6 @@
 <?php
-    include 'config1.php';
+    require './config/config.php';
 ?>
-
 <?php
 class Database {
     public $host = DB_HOST;
